@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">CRUD Auto</string>
+
+    <!--Fragment titles-->
+    <string name="title_fragment_driverlist">Drivers list</string>
+
+    <!--Dialogs-->
+    <string name="dialog_positive_button">OK</string>
+    <string name="dialog_negative_button">Cancel</string>
+    <string name="dialog_delete_driver_title">Remove driver</string>
+    <string name="dialog_delete_driver_message">Are you about to delete this driver with vehicles?\nName: %1$s\nCategory: %2$s</string>
+    <string name="dialog_add_driver_title">Add new driver</string>
+    <string name="dialog_edit_driver_title">Driver edit</string>
+    <string name="dialog_add_driver_name_hint">Driver name</string>
+    <string name="dialog_add_driver_category_hint">Driver category</string>
+    <string name="dialog_add_driver_error_name">Please fill driver name</string>
+    <string name="dialog_add_driver_error_category">Please fill driver category</string>
+    <string name="dialog_delete_vehicle_title">Remove vehicle</string>
+    <string name="dialog_edit_vehicle_title">Edit vehicle</string>
+    <string name="dialog_add_vehicle_title">Add new vehicle</string>
+    <string name="dialog_delete_vehicle_message">Are you about to delete this vehicle?\nModel: %1$s\nNumber: %2$s</string>
+    <string name="dialog_add_vehicle_model_hint">Vehicle model</string>
+    <string name="dialog_add_vehicle_number_hint">Vehicle number</string>
+    <string name="dialog_add_vehicle_error_model">Please fill vehicle model</string>
+    <string name="dialog_add_vehicle_error_number">Please fill vehicle number</string>
+
+    <!--Snackbar messages-->
+    <string name="snack_delete_driver">Driver deleted.\nName: %1$s, Category: %2$s</string>
+    <string name="snack_delete_vehicle">Vehicle deleted.\nModel: %1$s, Number: %2$s</string>
+
+    <!--Views-->
+
+    <!--Messages-->
+</resources>
