@@ -10,7 +10,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.olegsh.crudauto.App;
@@ -49,8 +48,7 @@ public class VehiclesAdapter extends RecyclerView.Adapter<VehiclesAdapter.Vehicl
 
     @Override
     public void onBindViewHolder(VehicleHolder holder, int position) {
-        Vehicle vehicle = data.get(position);
-        holder.bindVehicle(vehicle);
+        holder.bindView(position);
     }
 
     @Override
@@ -65,6 +63,7 @@ public class VehiclesAdapter extends RecyclerView.Adapter<VehiclesAdapter.Vehicl
 
     class VehicleHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView tvModel, tvNumber;
+        View itemView;
 
         public VehicleHolder(View itemView) {
             super(itemView);
@@ -72,6 +71,7 @@ public class VehiclesAdapter extends RecyclerView.Adapter<VehiclesAdapter.Vehicl
             tvNumber = itemView.findViewById(R.id.textNumber);
             itemView.findViewById(R.id.imgEdit).setOnClickListener(this);
             itemView.findViewById(R.id.imgDelete).setOnClickListener(this);
+            this.itemView = itemView;
         }
 
         @Override
@@ -129,9 +129,13 @@ public class VehiclesAdapter extends RecyclerView.Adapter<VehiclesAdapter.Vehicl
             }
         }
 
-        void bindVehicle(Vehicle vehicle) {
+        void bindView(int position) {
+            Vehicle vehicle = VehiclesAdapter.this.data.get(position);
             tvModel.setText(vehicle.getName());
             tvNumber.setText(vehicle.getNumber());
+            if(position % 2 == 0) {
+                itemView.setBackgroundColor(context.getResources().getColor(R.color.colorOdd));
+            }
         }
     }
 
