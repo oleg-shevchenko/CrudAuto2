@@ -29,6 +29,10 @@
     <string name="snack_delete_vehicle">Vehicle deleted.\nModel: %1$s, Number: %2$s</string>
 
     <!--Views-->
+    <string name="tv_name">Name:</string>
+    <string name="tv_category">Category:</string>
+    <string name="tv_model">Model:</string>
+    <string name="tv_number">Number:</string>
 
     <!--Messages-->
 </resources>
